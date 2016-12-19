@@ -1,0 +1,15 @@
+{
+  "name": "boteam",
+  "version": "1.0.0",
+  "description": "This is a first bot for team recife ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fabioxd20",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.4.4",
+    "restify": "^4.3.0"
+  }
+}
