@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "node app.js",
-    "deploy": "git commit -am 'messagem padrao' && git push heroku master"
+    "commit_deploy": "git commit -am 'messagem padrao' && git push heroku master",
+    "deploy": "git push heroku master"
   },
   "dependencies": {
     "botbuilder": "^3.5.0-rc9",
