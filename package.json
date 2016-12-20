@@ -1,15 +1,16 @@
 {
-  "name": "boteam",
-  "version": "1.0.0",
-  "description": "This is a first bot for team recife ",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "node": "5.9.1"
   },
-  "author": "fabioxd20",
-  "license": "ISC",
+  "scripts": {
+    "start": "node server.js",
+    "deploy": "git commit -am 'messagem padrao' && git push heroku master"
+  },
   "dependencies": {
-    "botbuilder": "^3.4.4",
-    "restify": "^4.3.0"
+    "body-parser": "^1.15.0",
+    "botbuilder": "^3.5.0-rc9",
+    "express": "^4.13.4",
+    "nodemailer": "^0.7.1",
+    "request": "^2.72.0"
   }
 }
