@@ -31,7 +31,30 @@ server.post('/api/messages', connector.listen());
 
 dialog.matches('Saudações', [
     function (session, args, next) {
-        session.send("Oi.");
+        session.send("Oi");
+    },
+    function (session, results) {
+        console.log("resposta SIM")
+    }
+]);
+
+dialog.matches('Apresentação', [
+    function (session, args, next) {
+        var entity = builder.EntityRecognizer.findEntity(args.entities, 'NomePessoa');
+        if (entity != null){
+            session.send("Você é " + entity.entity);
+        }else {
+            session.send("Desculpa, eu sou meio burro com nomes as vezes, mas prometo aprender o seu logo!");
+        }
+    },
+    function (session, results) {
+        console.log("resposta SIM")
+    }
+]);
+
+dialog.matches('Despedidas', [
+    function (session, args, next) {
+        session.send("Adeus");
     },
     function (session, results) {
         console.log("resposta SIM")
