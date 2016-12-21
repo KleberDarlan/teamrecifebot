@@ -52,6 +52,15 @@ dialog.matches('Apresentação', [
     }
 ]);
 
+dialog.matches('PerguntasNomePessoa', [
+    function (session, args, next) {
+        session.send("Eu ainda não aprendi a decorar nomes :( ");
+    },
+    function (session, results) {
+        console.log("resposta SIM")
+    }
+]);
+
 dialog.matches('Despedidas', [
     function (session, args, next) {
         session.send("Adeus");
